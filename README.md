@@ -15,8 +15,8 @@
  * Code First com Entity Framework 6.0.0.0.
  * Visual Studio 2017.
 
-Utilização de Design Patterns Service, Dependency Injection, Factory e Repository para divisão de responsabilidades gerando uma arquitetura simples e escalavel. 
-
+### Design Patterns
+Service, Dependency Injection, Factory e Repository para divisão de responsabilidades gerando uma arquitetura simples e escalável. 
 
 ## Imagens
 
