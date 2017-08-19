@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Product } from "app/model/product.model";
-import { ProductService } from "app/model/form.service";
+import { ProductService } from "app/model/product.service";
 
 import { BsModalService } from 'ngx-bootstrap/modal';
 //import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
