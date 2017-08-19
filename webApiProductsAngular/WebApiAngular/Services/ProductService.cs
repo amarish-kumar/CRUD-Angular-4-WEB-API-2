@@ -22,17 +22,25 @@ namespace WebApiAngular.Services
             return ProductRepository.GetProducts();
         }
         
-        //POST product
+        //ADD product
         public void PostProduct(Product product)
         {
             ProductRepository.PostProduct(product);
         }
 
+        //UPDATE product
+        public void UpdateProduct(Product product)
+        {
+            ProductRepository.UpdateProduct(product);
+        }
+
+        //GET product
         public Product GetProduct(int id)
         {
             return ProductRepository.GetProduct(id);
         }
 
+        //DELETE product
         public Product DeleteProduct(int id)
         {
             return ProductRepository.DeleteProduct(id);

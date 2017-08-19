@@ -53,14 +53,9 @@ export class FormComponent implements OnInit {
     this.product.Email = this.form.controls['email'].value;         
     
     if(this.product.Id){ 
-      this.ProductService.updateProduct(this.product).then(() => {                         
-        this.router.navigate(['/list']);
-      });
-
+      this.ProductService.updateProduct(this.product).then(() => this.router.navigate(['/list']) );
     }else{
-        this.ProductService.addProduct(this.product).then(() => {                         
-          this.router.navigate(['/list']);
-        });
+      this.ProductService.addProduct(this.product).then(() => this.router.navigate(['/list']) );
     }
   } 
 
@@ -74,7 +69,6 @@ export class FormComponent implements OnInit {
         this.form.get('codigo').setValue(this.product.Codigo); 
         this.form.get('preco').setValue(this.product.Preco); 
         this.form.get('email').setValue(this.product.Email); 
-
       });
   }
 

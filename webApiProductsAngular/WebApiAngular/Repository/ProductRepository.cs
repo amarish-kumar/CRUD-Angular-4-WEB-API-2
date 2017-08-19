@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -27,8 +29,26 @@ namespace WebApiAngular.Repository
         //Post product
         public void PostProduct(Product product)
         {
-            Context.Products.Add(product);
+            try
+            {
+                Context.Products.Add(product);
+                Context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }  
+
+        }
+
+        //Put product
+        public void UpdateProduct(Product product)
+        {
+           
+            Context.Entry(product).State = EntityState.Modified;
+
             Context.SaveChanges();
+           
         }
 
         //GET product
@@ -58,5 +78,6 @@ namespace WebApiAngular.Repository
             Product product = Context.Products.Find(id);
             return product;
         }
+    
     }
 }

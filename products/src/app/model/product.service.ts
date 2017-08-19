@@ -28,12 +28,12 @@ export class ProductService {
                .catch(this.handleError)
     }
  
-    // POST product
-    updateProduct(product: Product): Promise<Product> {       
+    // PUT product
+    updateProduct(product: Product): Promise<void> {       
         
         return this.http.put(this.url, JSON.stringify(product), this.options  )
                .toPromise()
-               .then(response => <Product>response.json())
+               .then( response => console.log(response) )
                .catch(this.handleError)
     }
     

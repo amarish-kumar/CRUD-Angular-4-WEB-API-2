@@ -8,14 +8,10 @@ import { ListComponent } from "./list/list.component";
 const ROUTES: Routes = [
   { path: 'save', component: FormComponent },
   { path: 'save/:id', component: FormComponent },
-
   { path: 'list', component: ListComponent },
-
   { path: '', redirectTo: 'list',  pathMatch: 'full'}
-
   //{ path: '**', component: PageNotFoundComponent }
 ];
-
 
 @NgModule({
   imports: [

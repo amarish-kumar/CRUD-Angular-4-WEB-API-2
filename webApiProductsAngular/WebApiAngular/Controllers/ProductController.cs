@@ -20,7 +20,7 @@ namespace WebApiAngular.Controllers
             ProductService = new ProductService();
         }
 
-        // GET: api/Products
+        // GET: api/Products        
         public IQueryable<Product> GetProduct()
         {
             return ProductService.getProducts();
@@ -39,6 +39,21 @@ namespace WebApiAngular.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = product.Id }, product);
         }
+
+        // PUT: api/Product/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult PutProduct(Product product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+                        
+            ProductService.UpdateProduct(product);
+
+            return Ok(product);
+        }
+        
 
         // GET: api/Product/:id
         [ResponseType(typeof(Product))]
@@ -67,7 +82,7 @@ namespace WebApiAngular.Controllers
             
             return Ok(product);
         }
-
+     
 
     }
 }

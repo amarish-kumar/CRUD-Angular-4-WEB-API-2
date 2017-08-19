@@ -7,14 +7,13 @@
 <div class="modal-body">
 
     <ul *ngIf="product != null">
-        <li> Id: {{ product.Id }} </li>
-        <li> Name: {{ product.Name }} </li>
-        <li> Description: {{ product.Descricao }} </li>
-        <li> Code: {{ product.Codigo }} </li>
-        <li> {{ product.Preco }} </li>
-        <li> {{ product.Email }} </li>
+        <h4> Id: {{ product.Id }} </h4>
+        <h4> Name: {{ product.Name }} </h4>
+        <h4> Description: {{ product.Descricao }} </h4>
+        <h4> Code: {{ product.Codigo }} </h4>
+        <h4> Price: {{ product.Preco }} </h4>
+        <h4> Email: {{ product.Email }} </h4>
     </ul>
-
 
 </div>
 <div class="modal-footer">
