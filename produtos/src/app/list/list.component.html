@@ -2,6 +2,7 @@
     <div class="row">
 
         <div class="col-sm-10  col-sm-offset-2">
+
             <table class="table">
                 <thead>
                     <tr>
@@ -22,16 +23,25 @@
                         <td>{{ product.Codigo }}</td>
                         <td>{{ product.Preco }}</td>
                         <td>{{ product.Email }}</td>
-                        <td><button class="btn btn-primary" [routerLink]="['/save', product.Id]">Editar</button> | <button (click)="onDetails(product.Id)" class="btn btn-info">Detalhes</button> |
-                            <button (click)="onDelete(product.Nome, product.Id )" class="btn btn-danger">Deletar</button></td>
+                        <td><button class="btn btn-primary" [routerLink]="['/save', product.Id]">
+                                 <i class="glyphicon glyphicon-pencil"></i>
+                            </button> |
+                            <button (click)="onDetails(product.Id)" class="btn btn-info">
+                                    <i class="glyphicon glyphicon-zoom-in"></i>    
+                            </button> |
+                            <button (click)="onDelete(product.Nome, product.Id )" class="btn btn-danger">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                            </button>
+                        </td>
                     </tr>
-
                     <tr *ngIf="products==null">
                         <p>Products not found </p>
                     </tr>
                 </tbody>
             </table>
-
+            <button [routerLink]="['/save']" class="btn btn-info">
+                    <i class="glyphicon glyphicon-plus"></i>
+            </button>
         </div>
     </div>
 </div>
