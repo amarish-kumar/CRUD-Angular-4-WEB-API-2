@@ -1,10 +1,10 @@
-import { ProdutosPage } from './app.po';
+import { ProductsPage } from './app.po';
 
-describe('produtos App', () => {
-  let page: ProdutosPage;
+describe('products App', () => {
+  let page: ProductsPage;
 
   beforeEach(() => {
-    page = new ProdutosPage();
+    page = new ProductsPage();
   });
 
   it('should display welcome message', () => {
