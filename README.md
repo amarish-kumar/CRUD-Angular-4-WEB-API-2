@@ -52,6 +52,9 @@ Após alteração do host executar o seguinte comando para iniciar a aplicação
 ng server
 ```
 
+Acessar o endereço http://localhost:4200/ para visualizar a plicação. :)
+
+
 ## Imagens
 
 ![Listing](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/Listing.PNG)
@@ -61,9 +64,8 @@ ng server
 ![Details](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/Details.PNG)
 
 
-
 ```
-EmanuelMeira@outlook.com 
+Duvidas? EmanuelMeira@outlook.com 
 ```
 
 
