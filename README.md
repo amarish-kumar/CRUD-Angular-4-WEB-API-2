@@ -52,7 +52,7 @@ Após alteração do host executar o seguinte comando para iniciar a aplicação
 ng server
 ```
 
-Acessar o endereço http://localhost:4200/ para visualizar a plicação. :)
+Acessar o endereço http://localhost:4200/ para visualizar a aplicação. :)
 
 
 ## Imagens
