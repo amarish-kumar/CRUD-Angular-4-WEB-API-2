@@ -9,7 +9,7 @@ import 'rxjs/add/operator/toPromise';
 export class ProductService {
 
     //Adicione aqui seu host SEM PATH ex: http://localhost:51694
-    private host: string = "http://localhost:51694";
+   private host: string = "http://localhost:51694";
     
    private url: string = this.host +"/api/product";
    
