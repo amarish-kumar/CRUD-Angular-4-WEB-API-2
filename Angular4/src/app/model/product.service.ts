@@ -8,7 +8,10 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ProductService {
 
-   private url: string = "http://localhost:51694/api/product";
+    //Adicione aqui seu host SEM PATH ex: http://localhost:51694
+    private host: string = "http://localhost:51694";
+    
+   private url: string = this.host +"/api/product";
    
    public headers: Headers;
    public options: RequestOptions;
