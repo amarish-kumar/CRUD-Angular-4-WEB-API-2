@@ -23,13 +23,13 @@ Service, Dependency Injection, Factory e Repository para divisão de responsabil
 * ASP.NET Web API 2.
 
 Abra o projeto no Viusal Studio, depois inicie o console em Tools > NuGet Package Manager > 'Package Manager Console' e 
-execute o comando para baixar as dependencias
+execute o comando para baixar as dependências. 
 
 ```
 Update-Package -Reinstall
 ```
 
-Aguardar a restauração dos pacotes e executar a aplicação.
+Aguardar a restauração dos pacotes e execute a aplicação.
 
 Atenção: Se o sistema apresentar "403.14 - Forbidden", tudo correu bem, apenas não existe rota para "/".
 
@@ -37,15 +37,16 @@ Sua API já esta ativa e funcional ;)
 
 * Angular 2/4.
 
-Abra um terminal a partir da pasta do projeto Angular4 e execute seguinte comando para baixar as dependencias.
+Abra um terminal a partir da pasta do projeto Angular4 e execute seguinte comando para baixar as dependências.
 
 ```
 npm install
 ```
 
-IMPORTANTE: Após a restauração dos pacotes acessar o arquivo 'product.service.ts' para alteração do host da API na variavel host.
+IMPORTANTE: Após a restauração dos pacotes acessar o arquivo 'product.service.ts' em 'Angular4\src\app\model' para 
+alteração do host da API.
 
-Apos alteração do host executar o seguinte comando para iniciar a aplicação.
+Após alteração do host executar o seguinte comando para iniciar a aplicação.
 
 ```
 ng server
