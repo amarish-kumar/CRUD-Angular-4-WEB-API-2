@@ -113,7 +113,8 @@
       <DependentUpon>201708152342590_mudanca_product.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Exceptions\RepositoryExeption.cs" />
+    <Compile Include="Models\Entities\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Services\ProductService.cs" />
