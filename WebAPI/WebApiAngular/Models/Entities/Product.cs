@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApiAngular.Models
+namespace WebApiAngular.Models.Entities
 {
     public class Product
     {
