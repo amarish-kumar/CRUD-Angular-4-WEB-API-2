@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebApiAngular.Models;
+using WebApiAngular.Models.Entities;
+using WebApiAngular.Models.Exceptions;
 using WebApiAngular.Repository;
 
 namespace WebApiAngular.Services
@@ -19,31 +20,67 @@ namespace WebApiAngular.Services
         //GET all products
         public IQueryable<Product> getProducts()
         {
-            return ProductRepository.GetProducts();
+            try
+            {             
+                 return ProductRepository.GetProducts();
+            }
+            catch (RepositoryException ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
         
+
         //ADD product
         public void PostProduct(Product product)
         {
-            ProductRepository.PostProduct(product);
+            try
+            {                
+                ProductRepository.PostProduct(product);             
+            }
+            catch (RepositoryException ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
         //UPDATE product
         public void UpdateProduct(Product product)
         {
-            ProductRepository.UpdateProduct(product);
+            try
+            {
+                ProductRepository.UpdateProduct(product);                
+            }
+            catch (RepositoryException ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
         //GET product
         public Product GetProduct(int id)
         {
-            return ProductRepository.GetProduct(id);
+            try
+            {
+                return ProductRepository.GetProduct(id);               
+            }
+            catch (RepositoryException ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
         //DELETE product
         public Product DeleteProduct(int id)
         {
-            return ProductRepository.DeleteProduct(id);
+            try
+            {
+                return ProductRepository.DeleteProduct(id);                   
+            }
+            catch (RepositoryException ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
 

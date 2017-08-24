@@ -7,7 +7,8 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using WebApiAngular.Context;
-using WebApiAngular.Models;
+using WebApiAngular.Models.Entities;
+using WebApiAngular.Models.Exceptions;
 
 namespace WebApiAngular.Repository
 {
@@ -23,7 +24,14 @@ namespace WebApiAngular.Repository
         //Get all products
         public IQueryable<Product> GetProducts()
         {
-            return Context.Products;
+            try
+            {
+                return Context.Products;
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
         //Post product
@@ -36,48 +44,78 @@ namespace WebApiAngular.Repository
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new RepositoryException(ex.Message, ex);
             }  
-
         }
 
         //Put product
         public void UpdateProduct(Product product)
         {
-           
-            Context.Entry(product).State = EntityState.Modified;
 
-            Context.SaveChanges();
-           
+            try
+            {
+                Context.Entry(product).State = EntityState.Modified;
+                Context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
+            
         }
 
         //GET product
         public Product GetProduct(int id)
         {
-            Product product = GetProductById(id);
-            return product;
+            try
+            {
+                Product product = GetProductById(id);
+                return product;
+                
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
         //DELETE product
         public Product DeleteProduct(int id)
         {
-            Product product = GetProductById(id);
+            try
+            {             
+                Product product = GetProductById(id);
 
-            if (product != null)
-            {               
-                Context.Products.Remove(product);
-                Context.SaveChanges();
-            }
+                if (product != null)
+                {               
+                    Context.Products.Remove(product);
+                    Context.SaveChanges();
+                }
             
-            return product;
+                return product;
+
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
 
 
         private Product GetProductById(int id)
         {
-            Product product = Context.Products.Find(id);
-            return product;
+            try
+            {               
+                Product product = Context.Products.Find(id);
+                return product;
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException(ex.Message, ex);
+            }
         }
+
+
     
     }
 }
