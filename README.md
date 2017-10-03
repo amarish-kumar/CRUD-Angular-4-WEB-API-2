@@ -57,11 +57,11 @@ Acessar o endereço http://localhost:4200/ para visualizar a aplicação. :)
 
 ## Imagens
 
-![Listing](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/Listing.PNG)
+![Listing](https://github.com/Emanuelmeira/CRUD-Angular-4-WEB-API-2/blob/master/img/Listing.PNG)
 
-![new](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/new.PNG)
+![new](https://github.com/Emanuelmeira/CRUD-Angular-4-WEB-API-2/blob/master/img/new.PNG)
 
-![Details](https://github.com/Emanuelmeira/crud-angular-webapi/blob/master/img/Details.PNG)
+![Details](https://github.com/Emanuelmeira/CRUD-Angular-4-WEB-API-2/blob/master/img/Details.PNG)
 
 
 ```
